@@ -5,4 +5,20 @@ BMKG menyediakan data terbuka untuk diakses publik untuk meningkatkan transparan
 
 Data-data ini dapat diakses melalui portal data BMKG, dan pengguna diwajibkan untuk mencantumkan BMKG sebagai sumber data jika digunakan dalam aplikasi atau sistem lainnya​ (Data Terbuka BMKG)​.
 ### Penggunaan
-Untuk mengakses salah satu data terbuka bmkg kita dapat menggunakan bahasa pemrograman Python sebagai request kita ke data terbuka bmkg dengan menggunakan library request, untuk menginstall library python kita bisa menggunakan command prompt dan pastika anda memiliki versi pip yang terbaru ```python -m pip install requests```
+Untuk mengakses salah satu data terbuka bmkg kita dapat menggunakan bahasa pemrograman Python sebagai request kita ke data terbuka bmkg dengan menggunakan library request, untuk menginstall library python kita dapat menggunakan command prompt dan pastikan anda memiliki versi pip yang terbaru ```python -m pip install requests```
+
+Setelah library request terinstall anda dapat memahami kode dibawah ini
+
+```
+import requests
+url = f'https://data.bmkg.go.id/DataMKG/TEWS/autogempa.json'
+headers = {
+    'User-Agent': 'application.json'
+}
+response = requests.get(url,headers=headers)
+if response.status_code == 200:
+    data = response.json()
+    print(data)
+else:
+    print(f'Error: {response.status_code}')
+```
