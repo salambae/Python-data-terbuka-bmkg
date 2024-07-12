@@ -1,3 +1,4 @@
+# Cara mengakses data terbuka BMKG dengan Python
 ### Pendahuluan
 BMKG menyediakan data terbuka untuk diakses publik untuk meningkatkan transparansi, akuntabilitas, dan artisipasi masyarakat. Data yang tersedia yakni :
 - Data Prakiraan Cuaca, Data ini berisi informasi seperti suhu udara, kelembapan, arah dan kecepatan angin, serta kondisi cuaca dengan format CSV (Comma Separated Values)
