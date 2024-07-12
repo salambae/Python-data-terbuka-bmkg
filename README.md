@@ -23,3 +23,11 @@ if response.status_code == 200:
 else:
     print(f'Error: {response.status_code}')
 ```
+
+Penjelasan kode diatas :
+- Menggunakan library request, pada baris pertama ```import request```, kita mengimpor library request yang memungkinkan kita untuk melakukan HTTP request
+- Mendefinisikan URL Endpoint dengan menambahkan variabel ```url = f'https://data.bmkg.go.id/DataMKG/TEWS/autogempa.json'```
+- Melakukan HTTP Get Request, fungsi sintaks ```response = request.get(url,headers=headers)``` yakni Kita melakukan GET request bersamaan dengan headers ke URL yang telah kita siapkan.
+- Mencetak dan memproses respon, fungsi sintaks ```if response.status_code == 200:``` adalah memeriksa apakah request berhasil dilakukan dengan memeriksa status code respons. Status code 200 menunjukkan request berhasil, apabila status code menunjukkan code selain 200 maka python akan mencetak error beserta error code
+- Apabila request berhasil, kita akan mengambil data json dari respon dan menyimpannya ke dalam variabel ```data = response.data()```
+- Mencetak data json mentah ke konsol
