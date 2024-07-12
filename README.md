@@ -9,7 +9,7 @@ Untuk mengakses salah satu data terbuka bmkg kita dapat menggunakan bahasa pemro
 
 Setelah library request terinstall anda dapat memahami kode dibawah ini
 
-```
+```Python
 import requests
 url = f'https://data.bmkg.go.id/DataMKG/TEWS/autogempa.json'
 headers = {
